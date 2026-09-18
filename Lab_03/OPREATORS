@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    // variables for the math stuff
+    int num1, num2;
+    int sum, diff, prod, rem;
+    float div;
+    
+    printf("Enter two numbers (separated by space): ");
+    scanf("%d %d", &num1, &num2);
+    
+    // doing the basic calculations
+    sum = num1 + num2;
+    diff = num1 - num2;
+    prod = num1 * num2;
+    rem = num1 % num2; 
+    
+    // need to cast one to float so it doesn't do integer division
+    div = (float)num1 / num2;
+    
+    printf("\n--- Results ---\n");
+    printf("Add: %d\n", sum);
+    printf("Sub: %d\n", diff);
+    printf("Mult: %d\n", prod);
+    printf("Div: %.2f\n", div);
+    printf("Remainder: %d\n", rem);
+    
+    // check which one is bigger
+    if (num1 > num2) {
+        printf("\nFirst number (%d) is greater than %d\n", num1, num2);
+    } 
+    else if (num1 < num2) {
+        printf("\nSecond number (%d) is greater than %d\n", num2, num1);
+    } 
+    else {
+        printf("\nBoth numbers are equal.\n");
+    }
+    
+    return 0;
+}
