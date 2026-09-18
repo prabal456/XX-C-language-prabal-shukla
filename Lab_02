@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+int main() {
+    // 1. Variable Declaration
+    int num1, num2;
+    int sum, difference, product, remainder;
+    float quotient; // Used float because division can result in decimals
+
+    // 2. Taking User Input
+    printf("Enter first integer: ");
+    scanf("%d", &num1);
+
+    printf("Enter second integer: ");
+    scanf("%d", &num2);
+
+    // 3. Performing Arithmetic Operations
+    sum        = num1 + num2;  // Addition
+    difference = num1 - num2;  // Subtraction
+    product    = num1 * num2;  // Multiplication
+    
+    // Modulus (%) gives the remainder of a division
+    remainder  = num1 % num2;  
+
+    // Typecasting (float) converts an integer to a decimal value before dividing
+    // This ensures we get an accurate answer (e.g., 5 / 2 = 2.5 instead of 2)
+    quotient   = (float)num1 / num2; 
+
+    // 4. Displaying Output
+    printf("\n--- Results ---\n");
+    printf("Addition (%d + %d)       = %d\n", num1, num2, sum);
+    printf("Subtraction (%d - %d)    = %d\n", num1, num2, difference);
+    printf("Multiplication (%d * %d) = %d\n", num1, num2, product);
+    printf("Division (%d / %d)       = %.2f\n", num1, num2, quotient); // %.2f prints up to 2 decimal places
+    printf("Modulus (%d %% %d)        = %d\n", num1, num2, remainder);   // %% is used to print a literal '%' sign
+
+    return 0;
+}
