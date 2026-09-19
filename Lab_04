@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main() {
+    int x = 5;
+
+    // Increment
+    x++; // Post-increment: x becomes 6
+    printf("After increment: %d\n", x);
+
+    // Decrement
+    x--; // Post-decrement: x becomes 5
+    printf("After decrement: %d\n", x);
+
+    return 0;
+}
